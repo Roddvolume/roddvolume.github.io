@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<title></title>
+<!--
+Author: Rodd Volume
+License: Apache License 2020 
+Copyright: Rodd Volume - Apache 2.0 Licensed all rights reserved
+Instagram: https://instagram.com/Roddv.jpg
+
+DO NOT COPY, MODIFIED, AND SHARE THE CODES
+
+------- THANKS ------
+-->
+
+<style>
+
+* {
+box-sizing: border-box;
+/*Android*/
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+/* iOS */
+-webkit-user-select: none;
+/* Safari */
+user-select: none;
+/* Chrome */
+-webkit-tap-highlight-color: transparent;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-ms-text-size-adjust: none;
+text-size-adjust: none;
+}
+
+body,
+html {
+margin: 0;
+padding: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+
+.rodd1 {
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center; 
+display: -webkit-box;
+justify-content: center; 
+height: 100%;
+width: 100%;
+}
+
+.rodd2 {
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #111;
+height: 100%;
+width: 100%;
+display: -webkit-box;
+display: flex; 
+flex-direction: column; 
+background: #fff;
+-webkit-box-orient: vertical; 
+-webkit-box-direction: normal;
+-webkit-animation-iteration-count: 1; 
+animation-iteration-count: 1;
+-webkit-animation-delay: 0s;
+animation-delay: 0s; 
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode: forwards; 
+animation: bgcolor .5s ease-out;
+box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+}
+
+@keyframes bgcolor {
+from { transform: translateX(-100%); }
+to { transform: translateX(0); }
+}
+
+.rodd3 {
+text-align: center; 
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+font-weight: bold;
+width: 100%;
+height: 40px;
+color: #444;
+padding: 0 10px;
+padding-top: 5px;
+border-bottom: 1px solid #ccc;
+box-shadow: 0 1.5px 1.5px 0 rgba(0,0,0,0.1);
+}
+
+.rodd3 .search {
+width: 30px;
+height: 30px;
+color: #222;
+float: right;
+}
+
+.rodd3 svg {
+width: 30px;
+height: 30px;
+color: #222;
+float: left;
+}
+
+.rodd4 {
+-webkit-box-flex: 1;
+flex: 1;
+background: #fff;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+margin-bottom: 0; 
+font-size: 12px; 
+cursor: pointer, hand;
+overflow: hidden; /* DO NOT REMOVE */
+}
+
+.menu {
+text-align: center;
+width: 100%;
+height: 35px;
+display: none;
+}
+
+.menu:target {
+display: flex;
+animation: bgcolor .5s ease-out;
+}
+
+.navbar {
+background: transparent;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #666;
+width: 100%;
+height: 100%;
+padding: 0;
+cursor: pointer, hand;
+overflow: hidden; /* DO NOT REMOVE */
+}
+
+.navbar a {
+text-decoration: none;
+color: #111;
+}
+
+
+/* PESAN */
+
+.music {
+width: 100%;
+height: 100%;
+padding: 10px;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+background: linear-gradient( to right bottom, #4facfe, #00f2fe);
+color: #fff;
+text-align: center;
+overflow: auto; /* DO NOT REMOVE */
+}
+
+input {
+height: 35px;
+padding: 5px 10px;
+outline: none;
+font-weight: bold;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #fff;
+width: 100%;
+font-size: 15px;
+border-radius: 4px;
+background: linear-gradient( to right, #6CBAFE, #00f2fe);
+border: 2px solid #fff;
+box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+ul {
+padding: 0;
+}
+
+ul li {
+height: auto;
+list-style: none;
+margin: 0;
+text-align: left;
+outline: none;
+cursor: pointer, hand;
+background: #fff;
+color: #444;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+width: 100%;
+padding: 10px;
+padding-left: 10px;
+border-radius: 4px;
+border: 1px solid  #fff;
+font-weight: bold;
+margin-bottom: 5px;
+font-size: 15px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+ul li:hover {
+transform: scale(1.05);
+color: #000;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.music h1 {
+font-size : 40px;
+margin: 10px;
+text-align: center;
+}
+
+.music svg {
+width: 23px;
+height: 23px;
+float: left;
+margin-right: 10px;
+color: #222;
+}
+
+::placeholder {
+color: #fff;
+font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff;
+  font-weight: bold;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  font-weight: bold;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  font-weight: bold;
+  opacity: 1;
+}
+
+svg:hover, .rodd3 .search:hover {
+color: #00C6FF;
+animation: menu 0.5s ease-in-out;
+}
+
+@keyframes menu {
+0% { transform: rotate(0); }
+50% { transform: rotateZ(-90deg); }
+100% { transform: rotate(0); }
+}
+
+button {
+font-size: 15px;
+background: #fff;
+border: 2px solid #fff;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+border-radius: 4px;
+font-weight: bold;
+padding: 5px;
+color: #444;
+width: 100%;
+outline: none;
+text-decoration: none;
+}
+
+button:hover {
+background: rgba(0,0,0,0.4);
+border: none;
+color: #fff;
+transform: rotateX(360deg);
+transition: .5s;
+}
+
+.barsmenu {
+background: transparent;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #666;
+width: 100%;
+height: 100%;
+padding: 0;
+border-radius: 2px;
+overflow: hidden; /* DO NOT REMOVE */
+display: none;
+}
+
+.barsmenu:target {
+display: flex;
+animation: bgcolor .5s ease-out;
+}
+
+.barsmenu button {
+text-align: left;
+font-size: 17px;
+margin-bottom: 5px;
+padding-left: 10px;
+}
+
+.barsmenu button:hover {
+transform: scale(1.05);
+background: #fff;
+color: #000;
+border: 2px solid #fff;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.barsmenu svg {
+width: 20px;
+height: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="rodd1">
+<div class="rodd2">
+<div class="rodd3">
+<!-- JUDUL -->
+<a href="#bars"><svg class="bars" viewBox="0 0 12 16" aria-hidden="true"><path fill="currentColor" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg></a>
+
+
+<a href="#cari"><svg class="search" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></a>
+
+</div>
+<!-- BEGIN TEXT -->
+<div class="rodd4" id="">
+
+
+<div class="barsmenu" id="bars">
+<div class="music">
+<br><br>
+<h1>RODD VOLUME</h1>
+<br><br>
+<a href="content://0@media/external/file/471973"><button><svg aria-hidden="true" focusable="false" data-icon="music" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"></path></svg>MUSIC PLAYER</button></a>
+
+<a href="content://0@media/external/file/471951"><button><svg aria-hidden="true" focusable="false" data-icon="download" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg>DOWNLOAD</button></a>
+
+<a href="#"><button>
+<svg aria-hidden="true" focusable="false" data-icon="exclamation-triangle" role="img" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg>LAPORKAN</button></a>
+
+<a href="#"><button><svg aria-hidden="true" focusable="false" data-icon="bell" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>TERBARU</button></a>
+
+<a href="#"><button><svg aria-hidden="true" focusable="false" data-icon="arrow-left" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg>KEMBALI</button></a>
+
+</div></div>
+
+
+
+
+
+
+
+<!-- INPUT PLAYLIST -->
+<div class="navbar" id="playlist">
+<div class="music">
+<h1 id="list">PLAYLIST</h1>
+
+<ul id="ul">
+<a href="content://0@media/external/file/471879"><li>Alexandra Porat - All I Want</li></a>
+<a href="content://0@media/external/file/471879"><li>Alexandra Porat - Don't Watch Me Cry</li></a>
+<a href="content://0@media/external/file/471879"><li>Tami Aulia - You Are The Reason</li></a>
+<a href="content://0@media/external/file/471879"><li>Tami Aulia - Penipu Hati</li></a>
+<a href="content://0@media/external/file/471879"><li>Tami Aulia - Salah</li></a>
+<a href="content://0@media/external/file/471879"><li>Tami Aulia - Hujan</li></a>
+<a href="content://0@media/external/file/471879"><li>Alexander Stewart - Hanya Rindu (English)</li></a>
+<a href="content://0@media/external/file/471879"><li>Feby - Celengan Rindu</li></a>
+<a href="content://0@media/external/file/471879"><li>Feby - Harusnya Aku</li></a>
+<a href="content://0@media/external/file/471879"><li>Cheryll - Memories</li></a>
+<a href="content://0@media/external/file/471879"><li>Cheryll - Monkey Dance</li></a>
+<a href="content://0@media/external/file/471879"><li>Hanin Dhiya - On My Way &times; Lily</li></a>
+<a href="content://0@media/external/file/471879"><li>Mirriam Eka - Cobalah Mengerti</li></a>
+<a href="content://0@media/external/file/471879"><li>Noughts - Obsessive</li></a>
+<a href="content://0@media/external/file/471879"><li>Rodd Volume - Invicible (Male Version)</li></a>
+
+</ul>
+<a href="mailto:roddvolume@gmail.com?subject=TAMBAHKAN LAGU" target="_blank"><button>TAMBAHKAN</button></a>
+</div>
+</div>
+
+
+
+</div><!-- END TEXT -->
+<div class="menu" id="cari">
+<input type="text" id="input" placeholder="Cari" onclick="document.getElementById('list').innerHTML ='';" onkeyup="roddSearch()">
+</div>
+
+</div><!-- END BOX -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT type="text/javascript">
+
+
+function roddSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('input');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("ul");
+  li = ul.getElementsByTagName('a');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("li")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+</SCRIPT>
+</body>
+</html>

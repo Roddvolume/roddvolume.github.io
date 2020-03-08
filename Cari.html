@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>Roddsite - Cerita</title>
+
+<!------------------------------------COPYRIGHT------------------------------------
+
+Author: Rodd
+License: Apache License 
+Copyright: Rodd - Apache 2.0 Licensed all rights reserved.
+Instagram: https://instagram.com/Roddv.jpg
+Icons: FontAwesome, Flaticon.
+
+DO NOT COPIED AND MODIFIED ALL RIGHTS RESERVED
+
+---------------------------------------- THANKS ------------------------------------->
+
+<style>
+
+* {
+box-sizing: border-box;
+/*Android*/
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+/* iOS */
+-webkit-user-select: none;
+/* Safari */
+user-select: none;
+/* Chrome */
+-webkit-tap-highlight-color: transparent;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-ms-text-size-adjust: none;
+text-size-adjust: none;
+}
+
+body,
+html {
+margin: 0;
+padding: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+height: 100%;
+width: 100%;
+}
+
+.rodd1 {
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center; 
+display: -webkit-box;
+justify-content: center; 
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+}
+
+.rodd2 {
+height: 100%;
+width: 100%;
+display: -webkit-box;
+display: flex; 
+flex-direction: column;
+background: transparent;
+-webkit-box-orient: vertical; 
+-webkit-box-direction: normal;
+overflow: hidden;
+}
+
+.rodd3 {
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+font-weight: bold;
+width: 100%;
+height: 40px;
+background: #fff;
+z-index: 10;
+border-bottom: 1px solid #ccc;
+overflow: hidden;
+box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.rodd4 {
+-webkit-box-flex: 1;
+flex: 1;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+padding: 0;
+margin: 0; 
+font-size: 12px; 
+overflow: hidden; /* DO NOT REMOVE */
+}
+
+
+.box {
+width: 100%;
+height: 100%;
+padding: 10px;
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+background: linear-gradient( to right bottom, #4facfe, #00f2fe);
+color: #fff;
+text-align: center;
+overflow: auto; /* DO NOT REMOVE */
+}
+
+
+input {
+padding: 5px 10px;
+outline: none;
+font-weight: bold;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #444;
+width: 100%;
+height: 100%;
+font-size: 17px;
+border: 1px solid #fff;
+}
+
+
+.box button {
+height: 40px;
+outline: none;
+background: #fff;
+color: #444;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+width: 100%;
+text-align: left;
+padding: 0 20px;
+border-radius: 4px;
+border: 1px solid  #fff;
+font-weight: bold;
+margin-bottom: 5px;
+font-size: 20px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.box button:hover {
+transform: scale(1.05);
+color: #000;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.box h1 {
+font-size : 40px;
+margin: 20px;
+text-align: center;
+}
+
+/* Search */
+
+ul {
+padding: 0;
+}
+
+ul li {
+height: auto;
+list-style: none;
+margin: 0;
+text-align: left;
+outline: none;
+cursor: pointer, hand;
+background: #fff;
+color: #444;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+width: 100%;
+padding: 10px;
+padding-left: 10px;
+border-radius: 4px;
+border: 1px solid  #fff;
+font-weight: bold;
+margin-bottom: 5px;
+font-size: 15px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+ul li:hover {
+transform: scale(1.05);
+color: #000;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+::placeholder {
+color: #4facfe;
+font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #4facfe;
+  font-weight: bold;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #4facfe;
+  font-weight: bold;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #4facfe;
+  font-weight: bold;
+  opacity: 1;
+}
+
+#cari button {
+font-size: 15px;
+background: #fff;
+border: 2px solid #fff;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+border-radius: 4px;
+font-weight: bold;
+padding: 5px;
+color: #444;
+width: 100%;
+height: 30px;
+text-align: center;
+outline: none;
+text-decoration: none;
+}
+
+#cari button:hover {
+background: rgba(0,0,0,0.4);
+border: none;
+color: #fff;
+transform: rotateX(360deg);
+transition: .5s;
+}
+
+a {
+text-decoration: none;
+}
+
+.search {
+text-align: center;
+width: 100%;
+background: #fff;
+height: 100%;
+animation: search .3s ease-out;
+}
+
+@keyframes search {
+from { transform: translateX(-100%); }
+to { transform: translateX(0); }
+}
+
+</style>
+</head>
+<body>
+<div class="rodd1">
+<div class="rodd2">
+<div class="rodd3">
+<!-- JUDUL -->
+
+<div class="search" id="cari">
+<input type="text" id="input" placeholder="Cari" onclick="document.getElementById('list').innerHTML ='';" onkeyup="roddSearch();">
+</div>
+
+</div>
+<!-- BEGIN TEXT -->
+<div class="rodd4" id="">
+
+
+
+
+
+
+
+
+<!-- CARI CERITA -->
+<div class="box" id="cari">
+
+<p id="list">CARI CERITA</p>
+
+<ul id="ul">
+<a href="content://0@media/external/file/471721"><li>Alexandra Porat - All I Want</li></a>
+<a href="content://0@media/external/file/471721"><li>Alexandra Porat - Don't Watch Me Cry</li></a>
+<a href="content://0@media/external/file/471721"><li>Tami Aulia - You Are The Reason</li></a>
+<a href="content://0@media/external/file/471721"><li>Tami Aulia - Penipu Hati</li></a>
+<a href="content://0@media/external/file/471721"><li>Tami Aulia - Salah</li></a>
+<a href="content://0@media/external/file/471721"><li>Tami Aulia - Hujan</li></a>
+<a href="content://0@media/external/file/471721"><li>Alexander Stewart - Hanya Rindu (English)</li></a>
+<a href="content://0@media/external/file/471721"><li>Feby - Celengan Rindu</li></a>
+<a href="content://0@media/external/file/471721"><li>Feby - Harusnya Aku</li></a>
+<a href="content://0@media/external/file/471721"><li>Cheryll - Memories</li></a>
+<a href="content://0@media/external/file/471721"><li>Cheryll - Monkey Dance</li></a>
+<a href="content://0@media/external/file/471721"><li>Hanin Dhiya - On My Way &times; Lily</li></a>
+<a href="content://0@media/external/file/471721"><li>Mirriam Eka - Cobalah Mengerti</li></a>
+<a href="content://0@media/external/file/471721"><li>Noughts - Obsessive</li></a>
+<a href="content://0@media/external/file/471721"><li>Rodd Volume - Invicible (Male Version)</li></a>
+
+</ul>
+<a href="#" target="_blank"><button>TAMBAHKAN</button></a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- END TEXT-->
+</div><!-- END BOX -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT type="text/javascript">
+
+
+function roddSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('input');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("ul");
+  li = ul.getElementsByTagName('a');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("li")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+</SCRIPT>
+</body>
+</html>

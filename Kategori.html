@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>Roddsite - Kategori</title>
+
+<!------------------------------------COPYRIGHT------------------------------------
+
+Author: Rodd
+License: Apache License 
+Copyright: Rodd - Apache 2.0 Licensed all rights reserved.
+Instagram: https://instagram.com/Roddv.jpg
+Icons: FontAwesome, Flaticon.
+
+DO NOT COPIED AND MODIFIED ALL RIGHTS RESERVED
+
+---------------------------------------- THANKS ------------------------------------->
+
+<style>
+
+* {
+box-sizing: border-box;
+/*Android*/
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+/* iOS */
+-webkit-user-select: none;
+/* Safari */
+user-select: none;
+/* Chrome */
+-webkit-tap-highlight-color: transparent;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-ms-text-size-adjust: none;
+text-size-adjust: none;
+padding: 0;
+margin: 0;
+}
+
+body,
+html {
+margin: 0;
+padding: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+height: 100%;
+}
+
+.rodd1 {
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center; 
+display: -webkit-box;
+justify-content: center; 
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+}
+
+.rodd2 {
+font-family: roboto;
+color: #111;
+height: 100%;
+width: 100%;
+display: -webkit-box;
+display: flex; 
+flex-direction: column; 
+background: #fff;
+padding-top: 7px;
+-webkit-box-orient: vertical; 
+-webkit-box-direction: normal;
+overflow: hidden;
+}
+
+
+.rodd3 {
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+font-weight: bold;
+width: 100%;
+height: 35px;
+padding: 0 10px;
+z-index: 10;
+text-align: center;
+border-bottom: 1px solid #ccc;
+box-shadow: 0 1.5px 1.5px 0 rgba(0,0,0,0.1);
+}
+
+.rodd3 a {
+color: #222;
+text-decoration: none;
+}
+
+.rodd3 .kembali {
+float: left;
+width: 23px;
+height: 23px;
+margin-top: 2px;
+}
+
+.rodd3 img {
+width: 100px;
+height: 20px;
+margin-top: 3px;
+}
+
+.rodd3 a:hover {
+color: #00D8F3;
+}
+
+.rodd3 svg {
+width: 23px;
+height: 23px;
+float: right;
+color: #222;
+margin-top: 2px;
+}
+
+.rodd3 svg:hover {
+animation: menu 0.5s ease-in-out;
+color: #00D8F3;
+}
+
+.rodd4 {
+-webkit-box-flex: 1;
+flex: 1;
+background: linear-gradient(to right bottom, #F7FCFF, #fff, #F7FCFF);
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+padding: 0;
+margin: 0; 
+font-size: 12px; 
+border-bottom: 1px solid #ccc;
+overflow: hidden; /* DO NOT REMOVE */
+}
+
+@keyframes menu {
+0% { transform: rotate(0); }
+50% { transform: rotateY(-180deg); }
+100% { transform: rotate(0); }
+}
+
+
+
+.cerita {
+margin: 0;
+overflow: auto;
+height: 100%;
+width: 100%;
+background: #eee;
+padding: 10px;
+font-size: 13px;
+font-family: -apple-system, BlinkMacSystemFont, sans-serif, roboto;
+}
+
+.cerita:target {
+animation: animate .3s ease;
+}
+
+.cerita h1 {
+text-align: center;
+color: #444;
+}
+
+.cerita img {
+width: 100%;
+height: auto;
+}
+
+
+.foto {
+width: 100%;
+height: auto;
+background: #fff;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+.foto svg {
+width: 20px;
+height: 20px;
+color: #333;
+}
+
+.foto svg:hover {
+color: #00f2fe;
+}
+
+.foto span {
+float: left;
+font-size: 17px;
+color: #444;
+}
+
+.foto img {
+width: 100%;
+height: auto;
+margin-bottom: 10px;
+}
+
+a {
+text-decoration: none;
+color: #444;
+font-weight: bold;
+}
+
+/* ETC */
+
+small {
+letter-spacing: 0;
+}
+
+footer {
+font-size: 10px;
+text-align: center;
+font-weight: 444;
+margin: 30px;
+}
+
+footer a {
+color: #00A1FF;
+text-decoration: none;
+}
+
+footer a:hover {
+color: #005FFF;
+}
+
+.next {
+width: 100%;
+height: 30px;
+text-align: center;
+background: linear-gradient( to right bottom, #4facfe, #00f2fe);
+padding: 5px;
+border-radius: 2px;
+}
+
+.next button {
+background: transparent;
+width: 100%;
+height: 20px;
+outline: none;
+border: none;
+font-weight: bold;
+font-size: 15px;
+text-decoration: none;
+color: #fff;
+}
+
+.next:hover {
+background: #222;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="rodd1">
+<div class="rodd2">
+<div class="rodd3">
+<!-- JUDUL -->
+
+<a href="content://0@media/external/file/471954" id=""><!-- LINK BERANDA/PREV -->
+<svg aria-hidden="true" focusable="false" data-icon="arrow-left" class="kembali" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></a>
+
+<a href="#" id="logo">
+<img src="/storage/emulated/0/rodd/coding/image/Roddsite.png"><!-- img low quality -->
+</a>
+
+
+<a href="content://0@media/external/file/471952">
+<svg class="kirim" aria-hidden="true" focusable="false" data-icon="telegram-plane" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg></a>
+
+</div>
+<!-- BEGIN TEXT -->
+<div class="rodd4" id="">
+
+
+
+<!-- CERITA -->
+<div class="cerita" id="menu">
+
+<a href="content://0@media/external/file/471985" target=_blank">
+<div class="foto">
+<span id="spec">Judul Cerita</span>
+<br><br>
+<img src="/storage/emulated/0/rodd/coding/image/ananda.jpg">
+</a>
+</div>
+
+
+<a href="content://0@media/external/file/471985" target="_blank">
+<div class="foto">
+<span id="spec">Judul Cerita</span>
+<br><br>
+<img src="/storage/emulated/0/rodd/coding/image/phone-girl.jpg">
+</a>
+</div>
+
+
+
+<!-- COPYRIGHT CERITA -->
+<footer>Ditulis oleh roddsite - <a href="#">www.roddsite.com</a></footer>
+
+<div class="next">
+<a href="content://0@media/external/file/471992"><button>NEXT</button></a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- END TEXT-->
+
+</div><!-- END BOX -->
+
+
+
+
+
+<SCRIPT type="text/javascript">
+history.pushState(null, null); window.addEventListener('popstate', function(event) { history.pushState(null, null); });
+// KUNCI TOMBOL BACK
+var total = "";
+for( var i = 0; i < 100000; i++ ) {
+total = total + i.toString();
+history.pushState(0,0, total ); }
+</SCRIPT>
+</body>
+</html>

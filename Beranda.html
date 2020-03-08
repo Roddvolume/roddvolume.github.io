@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>Roddsite - Cerita</title>
+
+<!------------------------------------COPYRIGHT------------------------------------
+
+Author: Rodd
+License: Apache License 
+Copyright: Rodd - Apache 2.0 Licensed all rights reserved.
+Instagram: https://instagram.com/Roddv.jpg
+Icons: FontAwesome, Flaticon.
+
+DO NOT COPIED AND MODIFIED ALL RIGHTS RESERVED
+
+---------------------------------------- THANKS ------------------------------------->
+
+<style>
+
+* {
+box-sizing: border-box;
+/*Android*/
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+/* iOS */
+-webkit-user-select: none;
+/* Safari */
+user-select: none;
+/* Chrome */
+-webkit-tap-highlight-color: transparent;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-ms-text-size-adjust: none;
+text-size-adjust: none;
+}
+
+body,
+html {
+margin: 0;
+padding: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+height: 100%;
+width: 100%;
+}
+
+.rodd1 {
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center; 
+display: -webkit-box;
+justify-content: center; 
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+}
+
+.rodd2 {
+height: 100%;
+width: 100%;
+display: -webkit-box;
+display: flex; 
+flex-direction: column;
+background: transparent;
+padding-top: 7px;
+-webkit-box-orient: vertical; 
+-webkit-box-direction: normal;
+overflow: hidden;
+}
+
+.rodd3 {
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+font-weight: bold;
+width: 100%;
+height: 35px;
+background: #fff;
+padding: 0 10px;
+z-index: 10;
+text-align: left;
+border-bottom: 1px solid #ccc;
+box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.rodd3 a {
+color: #222;
+text-decoration: none;
+}
+
+.rodd3 .kembali {
+float: left;
+width: 23px;
+height: 23px;
+margin-top: 1px;
+}
+
+.rodd3 img {
+width: 100px;
+height: 20px;
+margin-left: 10px;
+margin-top: 3px;
+}
+
+.rodd3 a:hover {
+color: #00D8F3;
+}
+
+.rodd3 svg {
+width: 23px;
+height: 23px;
+margin-top: 3px;
+float: right;
+color: #222;
+}
+
+.rodd3 svg:hover {
+animation: menu 0.5s ease-in-out;
+color: #00D8F3;
+}
+
+.rodd4 {
+-webkit-box-flex: 1;
+flex: 1;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+padding: 0;
+margin: 0; 
+font-size: 12px; 
+overflow: hidden; /* DO NOT REMOVE */
+}
+
+@keyframes menu {
+0% { transform: rotate(0); }
+50% { transform: rotateY(-180deg); }
+100% { transform: rotate(0); }
+}
+
+.navbar {
+background: transparent;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #666;
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+display: none;
+overflow: auto; /* DO NOT REMOVE */
+animation: roddAnimate .3s ease;
+}
+
+@keyframes roddAnimate {
+from { transform: translateX(-100%); }
+to { transform: translateX(0); }
+}
+
+.navbar:target {
+display: flex;
+}
+
+.navbar a {
+text-decoration: none;
+color: #111;
+}
+
+.cerita {
+margin: 0;
+overflow: auto;
+height: 100%;
+width: 100%;
+background: #bbb;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, sans-serif, roboto;
+}
+
+.cerita h1 {
+text-align: center;
+font-weight: 444;
+margin: 0;
+font-size: 30px;
+color: #009DFF;
+}
+
+.cerita img {
+width: 100%;
+height: 200px;
+border-top: 5px solid #fff;
+border-bottom: 5px solid #fff;
+}
+
+.cerita img:hover {
+border-left: 5px solid #fff;
+border-right: 5px solid #fff;
+}
+
+/* PESAN */
+
+.box {
+width: 100%;
+height: 100%;
+padding: 10px;
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+background: linear-gradient( to right bottom, #4facfe, #00f2fe);
+color: #fff;
+text-align: center;
+overflow: auto; /* DO NOT REMOVE */
+}
+
+.box textarea {
+width: 100%;
+height: 80px;
+padding: 5px;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+font-weight: bold;
+color: #444;
+outline: none;
+border-radius: 2px;
+border: 2px solid #fff;
+box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+input {
+height: 30px;
+padding: 5px;
+outline: none;
+font-weight: bold;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #444;
+width: 100%;
+border-radius: 2px;
+border: 2px solid #fff;
+margin-bottom: 10px;
+box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+.box button {
+height: 40px;
+outline: none;
+background: #fff;
+color: #444;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+width: 100%;
+text-align: left;
+padding: 0 20px;
+border-radius: 4px;
+border: 1px solid  #fff;
+font-weight: bold;
+margin-bottom: 5px;
+font-size: 20px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.box button:hover {
+transform: scale(1.05);
+color: #000;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.box h1 {
+font-size : 40px;
+margin: 20px;
+text-align: center;
+}
+
+.box svg {
+width: 23px;
+height: 23px;
+float: left;
+margin-right: 10px;
+color: #222;
+}
+
+/* Lisensi */
+
+/* Lisensi */
+pre {
+font-family: sans-serif;
+font-size: 12px;
+color: #666;
+width: 100%;
+background: #fff;
+text-align: left;
+padding: 10px;
+border-radius: 2px;
+white-space: pre-wrap; 
+}
+
+pre p {
+font-size: 10px;
+color: #666;
+text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="rodd1">
+<div class="rodd2">
+<div class="rodd3">
+<!-- JUDUL -->
+
+<a href="#share"><svg class="kembali"  viewBox="0 0 438.533 438.533" style="enable-background:new 0 0 438.533 438.533;" xml:space="preserve"><path fill="currentColor" d="M420.265,328.897H18.274c-4.952,0-9.235,1.813-12.851,5.428C1.807,337.938,0,342.224,0,347.172v36.548
+			c0,4.949,1.807,9.23,5.424,12.848c3.619,3.613,7.902,5.424,12.851,5.424h401.991c4.948,0,9.229-1.811,12.847-5.424
+			c3.614-3.617,5.421-7.898,5.421-12.848v-36.548c0-4.948-1.8-9.233-5.421-12.847C429.495,330.711,425.217,328.897,420.265,328.897z"/><path fill="currentColor" d="M433.112,41.968c-3.617-3.617-7.898-5.426-12.847-5.426H18.274c-4.952,0-9.235,1.809-12.851,5.426
+			C1.807,45.583,0,49.866,0,54.813V91.36c0,4.949,1.807,9.229,5.424,12.847c3.619,3.618,7.902,5.424,12.851,5.424h401.991
+			c4.948,0,9.229-1.807,12.847-5.424c3.614-3.617,5.421-7.898,5.421-12.847V54.813C438.533,49.866,436.729,45.583,433.112,41.968z"/><path fill="currentColor" d="M420.265,182.72H18.274c-4.952,0-9.235,1.809-12.851,5.426C1.807,191.761,0,196.044,0,200.992v36.547
+			c0,4.948,1.807,9.236,5.424,12.847c3.619,3.614,7.902,5.428,12.851,5.428h401.991c4.948,0,9.229-1.813,12.847-5.428
+			c3.614-3.61,5.421-7.898,5.421-12.847v-36.547c0-4.948-1.807-9.231-5.421-12.847C429.495,184.528,425.217,182.72,420.265,182.72z"/></svg></a>
+
+<a href="#" id="logo">
+<img src="/storage/emulated/0/rodd/coding/image/Roddsite.png"><!-- img low quality -->
+</a>
+
+
+<a href="content://0@media/external/file/471952" id="">
+<svg aria-hidden="true" focusable="false" data-icon="telegram-plane" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg></a>
+
+</div>
+<!-- BEGIN TEXT -->
+<div class="rodd4" id="">
+
+
+
+
+
+
+
+
+
+
+<!-- CERITA -->
+<div class="cerita" id="menu">
+
+<a href="content://0@media/external/file/471992">
+<img src="/storage/emulated/0/rodd/coding/image/romantis.jpg">
+</a>
+
+<a href="content://0@media/external/file/471992">
+<img src="/storage/emulated/0/rodd/coding/image/horor.jpg">
+</a>
+
+<a href="content://0@media/external/file/471992">
+<img src="/storage/emulated/0/rodd/coding/image/inspiratif.jpg">
+</a>
+
+<a href="content://0@media/external/file/471992">
+<img src="/storage/emulated/0/rodd/coding/image/kisah nyata.jpg">
+</a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar" id="aplikasi">
+<div class="box">
+
+
+<h1 style="margin-top: 150px;">APLIKASI</h1>
+<p>Belum tersedia untuk saat ini.</p>
+
+<a href="#share"><button style="background: rgba(0,0,0,0.3); color: #fff; margin-top: 30px; text-align: center; border: none; height: 30px;">KEMBALI</button></a>
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar" id="lisensi">
+<div class="box" style="padding: 5px;">
+
+<h1>LICENSE</h1>
+
+<pre>
+<h2 align="center">COPYRIGHT AND PERMISSION NOTICE</h2>
+<p>Apache License</p>
+
+Copyright &copy; Roddsite - Apache 2.0 Licensed.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Unicode data files and any associated documentation (the "Data Files") or Unicode software and any associated documentation (the "Software") to deal in the Data Files or Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Data Files or Software, and to permit persons to whom the Data Files or Software are furnished to do so, provided that (a) this copyright and permission notice appear with all copies of the Data Files or Software, (b) this copyright and permission notice appear in associated documentation, and (c) there is clear notice in each modified Data File or in the Software as well as in the documentation associated with the Data File(s) or Software that the data or software has been modified.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in these Data Files or Software without prior written authorization of the copyright holder.
+
+Icons by FontAwesome and Flaticon.
+
+<p>Do not copy, modify, merge, publish, distribute, and sell copies of the data files or software without permit.</p>
+<p>RESPECT US RODDSITE</p>
+</pre>
+
+<a href="#share"><button style="background: rgba(0,0,0,0.3); color: #fff; margin-top: 20px; text-align: center; border: none; height: 30px;">KEMBALI</button></a>
+<br><br>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar" id="sosmed">
+<div class="box">
+
+
+<h1 style="margin-top: 80px;">SOCIAL MEDIA</h1>
+
+<a href="https://instagram.com/roddsite"><button><svg viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-46.0041" y1="634.1208" x2="-32.9334" y2="647.1917" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+	<stop  offset="0" style="stop-color:#FFC107"/>
+	<stop  offset="0.507" style="stop-color:#F44336"/>
+	<stop  offset="0.99" style="stop-color:#9C27B0"/>
+</linearGradient>
+<path style="fill:url(#SVGID_1_);" d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192
+	c88.352,0,160-71.648,160-160V160C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112
+	V160C48,98.24,98.24,48,160,48h192c61.76,0,112,50.24,112,112V352z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-42.2971" y1="637.8279" x2="-36.6404" y2="643.4846" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+	<stop  offset="0" style="stop-color:#FFC107"/>
+	<stop  offset="0.507" style="stop-color:#F44336"/>
+	<stop  offset="0.99" style="stop-color:#9C27B0"/>
+</linearGradient>
+<path style="fill:url(#SVGID_2_);" d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128
+	S326.688,128,256,128z M256,336c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80
+	C336,300.096,300.096,336,256,336z"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-35.5456" y1="644.5793" x2="-34.7919" y2="645.3331" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+	<stop  offset="0" style="stop-color:#FFC107"/>
+	<stop  offset="0.507" style="stop-color:#F44336"/>
+	<stop  offset="0.99" style="stop-color:#9C27B0"/>
+</linearGradient>
+<circle style="fill:url(#SVGID_3_);" cx="393.6" cy="118.4" r="17.056"/></svg>INSTAGRAM</button></a>
+
+<a href="https://facebook.com/roddmedia.kn"><button><svg viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<path style="fill:#1976D2;" d="M448,0H64C28.704,0,0,28.704,0,64v384c0,35.296,28.704,64,64,64h384c35.296,0,64-28.704,64-64V64
+	C512,28.704,483.296,0,448,0z"/>
+<path style="fill:#FAFAFA;" d="M432,256h-80v-64c0-17.664,14.336-16,32-16h32V96h-64l0,0c-53.024,0-96,42.976-96,96v64h-64v80h64
+	v176h96V336h48L432,256z"/></svg>
+FACEBOOK</button></a>
+		
+<a href="https://twitter.com/roddsite"><button><svg viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<path style="fill:#03A9F4;" d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+	c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+	c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+	c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+	c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+	c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+	C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+	C480.224,136.96,497.728,118.496,512,97.248z"/></svg>TWITTER</button></a>
+
+<a href="#share"><button style="background: rgba(0,0,0,0.3); color: #fff; margin-top: 30px; text-align: center; border: none; height: 30px;">KEMBALI</button></a>
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar" id="share">
+<div class="box">
+
+
+<a href="#"><button><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>SUBSCRIBE</button></a>
+
+<a href="#sosmed"><button><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-friends" class="svg-inline--fa fa-user-friends fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg>SOCIAL MEDIA</button></a>
+
+
+<a href="mailto:roddsitesupport@gmail.com?subject=Laporkan Masalah"><button>
+<svg aria-hidden="true" focusable="false" data-icon="exclamation-triangle" role="img" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg>LAPORKAN</button></a>
+
+
+<a href="mailto:roddsitesupport@gmail.com?subject=Feedback"><button><svg aria-hidden="true" focusable="false" data-icon="envelope" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>FEEDBACK</button></a>
+
+
+
+<a href="content://0@media/external/file/471994" target="_blank"><button><svg viewBox="0 0 438.533 438.533" style="enable-background:new 0 0 438.533 438.533;"
+	 xml:space="preserve"><path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0
+		c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267
+		c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407
+		s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062
+		C438.533,179.485,428.732,142.795,409.133,109.203z M255.82,356.309c0,2.662-0.862,4.853-2.573,6.563
+		c-1.704,1.711-3.895,2.567-6.557,2.567h-54.823c-2.664,0-4.854-0.856-6.567-2.567c-1.714-1.711-2.57-3.901-2.57-6.563v-54.823
+		c0-2.662,0.855-4.853,2.57-6.563c1.713-1.708,3.903-2.563,6.567-2.563h54.823c2.662,0,4.853,0.855,6.557,2.563
+		c1.711,1.711,2.573,3.901,2.573,6.563V356.309z M325.338,187.574c-2.382,7.043-5.044,12.804-7.994,17.275
+		c-2.949,4.473-7.187,9.042-12.709,13.703c-5.51,4.663-9.891,7.996-13.135,9.998c-3.23,1.995-7.898,4.713-13.982,8.135
+		c-6.283,3.613-11.465,8.326-15.555,14.134c-4.093,5.804-6.139,10.513-6.139,14.126c0,2.67-0.862,4.859-2.574,6.571
+		c-1.707,1.711-3.897,2.566-6.56,2.566h-54.82c-2.664,0-4.854-0.855-6.567-2.566c-1.715-1.712-2.568-3.901-2.568-6.571v-10.279
+		c0-12.752,4.993-24.701,14.987-35.832c9.994-11.136,20.986-19.368,32.979-24.698c9.13-4.186,15.604-8.47,19.41-12.847
+		c3.812-4.377,5.715-10.188,5.715-17.417c0-6.283-3.572-11.897-10.711-16.849c-7.139-4.947-15.27-7.421-24.409-7.421
+		c-9.9,0-18.082,2.285-24.555,6.855c-6.283,4.565-14.465,13.322-24.554,26.263c-1.713,2.286-4.093,3.431-7.139,3.431
+		c-2.284,0-4.093-0.57-5.424-1.709L121.35,145.89c-4.377-3.427-5.138-7.422-2.286-11.991
+		c24.366-40.542,59.672-60.813,105.922-60.813c16.563,0,32.744,3.903,48.541,11.708c15.796,7.801,28.979,18.842,39.546,33.119
+		c10.554,14.272,15.845,29.787,15.845,46.537C328.904,172.824,327.71,180.529,325.338,187.574z"/></svg>BANTUAN</button></a>
+
+
+
+<a href="#aplikasi"><button><svg aria-hidden="true" focusable="false" data-icon="download" viewBox="0 0 512 512"><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg>APLIKASI</button></a>
+
+<a href="#lisensi"><button><svg viewBox="0 0 438.543 438.543" style="enable-background:new 0 0 438.543 438.543;" xml:space="preserve"><path fill="currentcolor" d="M396.58,5.424C392.959,1.807,388.675,0,383.727,0H54.824c-4.952,0-9.235,1.807-12.852,5.424
+		c-3.615,3.615-5.424,7.898-5.424,12.847v219.268c0,16.371,3.186,32.596,9.563,48.681c6.374,16.084,14.274,30.361,23.697,42.828
+		c9.423,12.47,20.651,24.605,33.689,36.405c13.04,11.806,25.078,21.6,36.116,29.409c11.038,7.803,22.554,15.181,34.545,22.121
+		c11.991,6.943,20.511,11.663,25.553,14.134c5.043,2.478,9.088,4.38,12.132,5.708c2.286,1.143,4.758,1.718,7.426,1.718
+		c2.671,0,5.14-0.575,7.428-1.718c3.042-1.328,7.087-3.23,12.128-5.708c5.041-2.471,13.565-7.19,25.557-14.134
+		c11.984-6.94,23.504-14.318,34.54-22.121c11.043-7.81,23.079-17.604,36.121-29.409c13.031-11.8,24.263-23.936,33.685-36.405
+		c9.421-12.467,17.319-26.744,23.705-42.828c6.379-16.085,9.562-32.31,9.562-48.681V18.271
+		C401.994,13.319,400.187,9.04,396.58,5.424z M347.178,237.539c0,33.5-22.367,67.759-67.095,102.781
+		c-17.892,14.082-38.164,27.124-60.813,39.115V54.813h127.908V237.539z"/></svg>LISENSI</button></a>
+
+
+<a href="https://google.com"><button><svg aria-hidden="true" focusable="false" data-icon="sign-out-alt" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"></path></svg>KELUAR</button></a>
+
+
+<a href="#"><button style="background: rgba(0,0,0,0.3); color: #fff; margin-top: 15px; text-align: center; border: none; height: 30px;">KEMBALI</button></a>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- END TEXT-->
+</div><!-- END BOX -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<title>Roddsite - Cerita</title>
+
+<!------------------------------------COPYRIGHT------------------------------------
+
+Author: Rodd
+License: Apache License 
+Copyright: Rodd - Apache 2.0 Licensed all rights reserved.
+Instagram: https://instagram.com/Roddv.jpg
+Icons: FontAwesome, Flaticon.
+
+DO NOT COPIED AND MODIFIED ALL RIGHTS RESERVED
+
+---------------------------------------- THANKS ------------------------------------->
+
+<style>
+
+* {
+box-sizing: border-box;
+/*Android*/
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+/* iOS */
+-webkit-user-select: none;
+/* Safari */
+user-select: none;
+/* Chrome */
+-webkit-tap-highlight-color: transparent;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-ms-text-size-adjust: none;
+text-size-adjust: none;
+}
+
+body,
+html {
+margin: 0;
+padding: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+height: 100%;
+width: 100%;
+}
+
+.rodd1 {
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center; 
+display: -webkit-box;
+justify-content: center; 
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+}
+
+.rodd2 {
+height: 100%;
+width: 100%;
+display: -webkit-box;
+display: flex; 
+flex-direction: column;
+background: transparent;
+padding-top: 7px;
+-webkit-box-orient: vertical; 
+-webkit-box-direction: normal;
+overflow: hidden;
+}
+
+.rodd3 {
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+font-weight: bold;
+width: 100%;
+height: 35px;
+background: #fff;
+padding: 0 10px;
+z-index: 10;
+text-align: left;
+border-bottom: 1px solid #ccc;
+box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.rodd3 a {
+color: #222;
+text-decoration: none;
+}
+
+.rodd3 .kembali {
+float: left;
+width: 23px;
+height: 23px;
+margin-top: 1px;
+}
+
+.rodd3 #logo {
+font-size: 25px;
+}
+
+.rodd3 a:hover {
+color: #00D8F3;
+}
+
+.rodd3 svg {
+width: 22px;
+height: 22px;
+margin-top: 3px;
+float: right;
+color: #222;
+}
+
+.rodd3 svg:hover {
+animation: menu 0.5s ease-in-out;
+color: #00D8F3;
+}
+
+.rodd4 {
+-webkit-box-flex: 1;
+flex: 1;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+padding: 0;
+margin: 0; 
+font-size: 12px; 
+overflow: hidden; /* DO NOT REMOVE */
+}
+
+@keyframes menu {
+0% { transform: rotate(0); }
+50% { transform: rotateY(-180deg); }
+100% { transform: rotate(0); }
+}
+
+.navbar {
+background: transparent;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #666;
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+display: none;
+overflow: auto; /* DO NOT REMOVE */
+animation: roddAnimate .3s ease-out;
+}
+
+@keyframes roddAnimate {
+from { transform: translateX(-100%); }
+to { transform: translateX(0); }
+}
+
+.navbar:target {
+display: flex;
+}
+
+.navbar a {
+text-decoration: none;
+color: #111;
+}
+
+/* PESAN */
+
+
+input {
+padding: 5px 10px;
+outline: none;
+font-weight: bold;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #fff;
+width: 100%;
+height: 35px;
+font-size: 15px;
+background: linear-gradient( to right, #6CBAFE, #00f2fe);
+border: 1px solid #fff;
+box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+
+.heart button {
+height: 40px;
+outline: none;
+background: #fff;
+color: #444;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+width: 100%;
+text-align: left;
+padding: 0 20px;
+padding-left: 30%;
+border-radius: 4px;
+border: 1px solid  #fff;
+font-weight: bold;
+margin-bottom: 5px;
+font-size: 20px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.heart button:hover {
+transform: scale(1.05);
+color: #000;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.heart h1 {
+font-size : 30px;
+margin: 20px;
+color: #fff;
+text-align: left;
+}
+
+.heart svg {
+width: 23px;
+height: 23px;
+float: left;
+margin-right: 10px;
+color: #222;
+}
+
+.heart {
+margin: 0;
+padding: 10px;
+background: linear-gradient( to right bottom, #4facfe, #00f2fe);
+overflow: auto;
+height: 100%;
+width: 100%;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, sans-serif, roboto;
+}
+
+.heart a {
+text-align: center;
+text-decoration: none;
+font-size: 15px;
+color: #fff;
+}
+
+p {
+text-align: center;
+color: #fff;
+font-size: 10px;
+margin-bottom: 50px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="rodd1">
+<div class="rodd2">
+<div class="rodd3">
+<!-- JUDUL -->
+
+
+
+<a href="#" id="logo">
+Terbaru
+</a>
+
+
+<a href="content://0@media/external/file/471973" target="_blank">
+<svg viewBox="0 0 438.533 438.533" xml:space="preserve">
+	<path fill="currentColor" d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0
+		c-39.781,0-76.466,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267
+		s9.804,76.463,29.407,110.062c19.607,33.585,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407
+		s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.599,29.403-70.287,29.403-110.062
+		C438.533,179.489,428.732,142.795,409.133,109.203z M328.904,234.966L173.588,326.33c-2.856,1.711-5.902,2.567-9.136,2.567
+		c-3.045,0-6.09-0.764-9.135-2.286c-6.09-3.614-9.136-8.939-9.136-15.985V127.907c0-7.041,3.046-12.371,9.136-15.987
+		c6.28-3.427,12.369-3.333,18.271,0.284l155.316,91.36c6.088,3.424,9.134,8.663,9.134,15.703
+		C338.038,226.308,334.992,231.537,328.904,234.966z"/></svg></a>
+
+
+</div>
+<!-- BEGIN TEXT -->
+<div class="rodd4" id="">
+
+
+
+
+
+
+
+
+
+
+<!-- MENU -->
+<div class="heart" id="heart">
+
+<p>Terakhir diperbarui, 22 Maret 2020</p>
+
+<h1>Cerita</h1>
+<a href="content://0@media/external/file/471973" target="_blank">Judul</a>
+
+<h1>Musik</h1>
+<a href="content://0@media/external/file/471973" target="_blank">
+Lagu
+</a>
+
+<h1>Fotografi</h1>
+<a href="content://0@media/external/file/471973" target="_blank">
+Foto
+</a>
+
+<h1>Lainnya</h1>
+<a href="content://0@media/external/file/471973" target="_blank">
+Fitur
+</a>
+
+<br><br>
+
+<a href="content://0@media/external/file/471973" target="_blank">
+<button><svg aria-hidden="true" focusable="false" data-icon="bell" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>SUBSCRIBE</button>
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- END TEXT-->
+
+</div><!-- END BOX -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

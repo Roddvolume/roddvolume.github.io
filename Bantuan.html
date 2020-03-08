@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="author" content="roddsite"/>
+<meta name="keywords" content="roddsite, cerita, kisah, novel, buku, cerpen, cerita pendek, cerita terbaru, kisah terbaru, cerita trending, kisah trending, horor, cerita horor, kisah horor, kisah nyata, cerita inspiratif, trending">
+<meta name="description" content="Roddsite adalah website yang menyediakan cerita-cerita menarik, musik, dan artikel selain itu kamu juga bisa membaca cerita yang dikirim oleh pengunjung website pastinya bisa menjadi mood booster kamu."/>
+<title>Roddsite</title>
+
+<!------------------------------------COPYRIGHT------------------------------------
+
+Author: Rodd
+License: Apache License 
+Copyright: Rodd - Apache 2.0 Licensed all rights reserved.
+Instagram: https://instagram.com/Roddv.jpg
+Icons: FontAwesome, Flaticon.
+
+DO NOT COPIED AND MODIFIED ALL RIGHTS RESERVED
+
+---------------------------------------- THANKS ------------------------------------->
+
+<style>
+
+* {
+box-sizing: border-box;
+/*Android*/
+-webkit-user-select: none;
+-webkit-touch-callout: none;
+/* iOS */
+-webkit-user-select: none;
+/* Safari */
+user-select: none;
+/* Chrome */
+-webkit-tap-highlight-color: transparent;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
+-ms-text-size-adjust: none;
+text-size-adjust: none;
+padding: 0;
+margin: 0;
+}
+
+body,
+html {
+margin: 0;
+padding: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+height: 100%;
+width: 100%;
+background: #fff;
+overflow: auto;
+}
+
+.rodd1 {
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center; 
+display: -webkit-box;
+justify-content: center; 
+height: 100%; /* DO NOT REMOVE */
+padding: 0;
+margin: 0;
+background: #fff;
+}
+
+
+
+.rodd2 {
+font-family: roboto;
+color: #111;
+height: 100%;
+width: 100%;
+display: -webkit-box;
+display: flex; 
+flex-direction: column; /* DO NOT REMOVE */
+background: #fff;
+padding-top: 7px;
+-webkit-box-orient: vertical; 
+-webkit-box-direction: normal;
+overflow: hidden;
+}
+
+
+
+/* NAVBAR ATAS */
+.rodd3 {
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+font-weight: bold;
+width: 100%;
+height: 35px;
+z-index: 10;
+text-align: center;
+padding: 0 10px;
+cursor: pointer, hand;
+border-bottom: 1px solid #ccc;
+box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.rodd3 a {
+color: #222;
+text-decoration: none;
+}
+
+.rodd3 img {
+width: 100px;
+height: 20px;
+margin-top: 3px;
+}
+
+.rodd3 .option {
+width: 27px;
+height: 27px;
+float: left;
+color: #222;
+}
+
+.rodd3 a:hover {
+color: #00D8F3;
+}
+
+.rodd3 .pesan {
+width: 23px;
+height: 23px;
+float: right;
+margin-top: 2px;
+color: #000;
+}
+
+.rodd3 .pesan:hover, .rodd3 .option:hover {
+animation: menu 0.5s ease-in-out;
+color: #00D8F3;
+}
+
+.rodd4 {
+-webkit-box-flex: 1;
+flex: 1;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+border-radius: 2px;
+padding: 0;
+margin: 0; 
+font-size: 12px; 
+border-bottom: 1px solid #ccc;
+overflow: hidden; /* DO NOT REMOVE */
+}
+
+
+
+
+@keyframes menu {
+0% { transform: rotate(0); }
+50% { transform: rotateY(-180deg); }
+100% { transform: rotate(0); }
+}
+
+
+/***/
+.navbar {
+background: transparent;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #666;
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+display: none;
+box-sizing: border-box;
+overflow: auto; /* DO NOT REMOVE */
+animation: animate .3s ease;
+}
+
+@keyframes animate {
+0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.80);
+    opacity: 0;
+  }
+}
+
+.navbar:target {
+display: flex;
+}
+
+.navbar a {
+text-decoration: none;
+color: #111;
+}
+
+.cerita {
+margin: 0;
+overflow: auto;
+height: 100%;
+width: 100%;
+background: #bbb;
+color: #666;
+font-family: -apple-system, BlinkMacSystemFont, sans-serif, roboto;
+}
+
+.cerita:target {
+animation: animate .3s ease;
+}
+
+.cerita img, #love img {
+width: 100%;
+height: 200px;
+border-top: 5px solid #fff;
+border-bottom: 5px solid #fff;
+}
+
+.cerita img:hover, #love img:hover {
+border-left: 5px solid #fff;
+border-right: 5px solid #fff;
+}
+
+/* BOX */
+
+.box {
+width: 100%;
+height: 100%;
+padding: 5px;
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+background: #4facfe;
+color: #fff;
+text-align: center;
+overflow: auto; /* DO NOT REMOVE */
+}
+
+input {
+height: 100%;
+padding: 7px;
+outline: none;
+font-weight: bold;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+color: #444;
+width: 100%;
+font-size: 15px;
+border: 1px solid #fff;
+box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+
+::placeholder {
+color: #4facfe;
+font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #4facfe;
+  font-weight: bold;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #4facfe;
+  font-weight: bold;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #4facfe;
+  font-weight: bold;
+  opacity: 1;
+}
+
+
+img {
+width: 100%;
+}
+
+a {
+text-decoration: none;
+}
+
+/* PENCARIAN */
+
+.chatbot_box {
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+ul li {
+list-style: none;
+font-weight: bold;
+}
+
+.chatlist a {
+text-transform: uppercase;
+height: 35px;
+outline: none;
+background: #fff;
+color: #444;
+font-family: -apple-system, BlinkMacSystemFont, roboto, sans-serif, arial;
+width: 100px;
+padding: 2px 50px;
+border-radius: 50px;
+border: 1px solid  #fff;
+font-weight: bold;
+font-size: 20px;
+box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.chatlist {
+  font-family: inherit;
+  font-size: 13px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+.chatlist .userInput, .chatlist .bot_output {
+  padding: 5px;
+  margin: 5px;
+  max-width: 100%;
+  background-color: transparent;
+  color: #fff;
+}
+.chatlist .userInput {
+  text-transform: lowercase;
+  opacity: 0;
+  background-color: transparent;
+  color: #fff;
+  text-align: right;
+  border-radius: 2px;
+  margin-right: 10px;
+  animation-name: animateBubble;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+.chatlist .bot_output {
+  align-self: flex-start;
+  text-align: left;
+  will-change: auto;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation-name: animateBubble;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+.chatlist .bot_output:last-child {
+  display: none;
+}
+.chatlist .bot_command {
+  color: #f5f5f5;
+  color: #27ae60;
+  font-weight: 600;
+}
+.chatlist .bot_output:nth-child(1) {
+  animation-delay: 600ms;
+  animation-play-state: running;
+}
+.chatlist .bot_output:nth-child(2) {
+  animation-delay: 1200ms;
+  animation-play-state: running;
+}
+.chatlist .bot_output:nth-child(3) {
+  animation-delay: 1800ms;
+  animation-play-state: running;
+}
+.chatlist .bot_output_standard:last-child {
+  display: block;
+}
+.chatlist .bot_output_failed {
+  display: block !important;
+}
+.chatlist .bot_output_second_sentence {
+  display: block;
+}
+
+@keyframes animateBubble {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- BOX -->
+
+<div class="rodd1">
+
+
+<div class="rodd2">
+
+<!-- NAVBAR ATAS -->
+<div class="rodd3">
+
+<a href="content://0@media/external/file/471958" id="">
+<svg aria-hidden="true" focusable="false" data-icon="angle-left" class="option" role="img" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a>
+
+
+<!-- NAMA WEBSITE -->
+<a href="#" id="logo">
+<img src="/storage/emulated/0/rodd/coding/image/Roddsite.png"><!-- img low quality -->
+</a>
+<!-- KIRIMAN -->
+<a href="mailto:roddvolume@gmail.com?subject=Bantuan" id="">
+<svg aria-hidden="true" focusable="false" data-icon="headset" class="pesan" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65 64-64v-48c0-35.35-28.65-64-64-64h-16c-17.67 0-32 14.33-32 32v112c0 17.67 14.33 32 32 32h16zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0z"></path></svg></a>
+
+</div>
+
+<!-- REAL BODY -->
+<div class="rodd4" id="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- PENCARIAN-->
+<div class="box">
+
+<!-- Input link index / retry -->
+<a href="#" style="color: #fff; float: right; font-weight: bold; margin: 5px 0;" id="history"></a>
+
+<div class="chatbot_box">
+        
+            <div class="chatbox_area">
+            <ul class="chatlist">
+          <li class="bot_output bot_output_standard">Halo! Rodd Volume disini ada yang bisa dibantu?</li>
+          <li class="bot_output bot_output_standard">Halaman ini masih dalam proses pengembangan terima kasih.</li>
+            </ul>
+      </div>
+        </form>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- END REAL BODY-->
+
+
+
+
+<div class="rodd3" style="border-bottom: none; padding: 0;">
+
+<form action="" id="chatform">
+            <input type="search" placeholder="Ketik sesuatu..." class="chatbox" name="chatbox" resize: "none" autocapitalize="off" autocomplete="off">
+            <button class="submit_button" type="submit" onclick="document.getElementById('history').innerHTML ='Hapus Riwayat Pencarian';" style="display: none;">CARI</button>
+
+
+</div>
+
+
+
+</div><!-- END BOX -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- PENCARIAN -->
+<SCRIPT type="text/javascript">
+var sendForm = document.querySelector('#chatform'),
+    textInput = document.querySelector('.chatbox'),
+    chatList = document.querySelector('.chatlist'),
+    userBubble = document.querySelectorAll('.userInput'),
+    botBubble = document.querySelectorAll('.bot_output'),
+    animateBotBubble = document.querySelectorAll('.bot_input--animation'),
+    overview = document.querySelector('.chatbot_box'),
+    hasCorrectInput,
+    imgLoader = false,
+    animationCounter = 1,
+    animationBubbleDelay = 600,
+    input,
+    previousInput,
+    isReaction = false,
+    unkwnCommReaction = "Mohon untuk menggunakan pertanyaan atau kata kunci yang lebih spesifik.",
+    chatbotButton = document.querySelector(".submit_button")
+
+sendForm.onkeydown = function(e){
+  if(e.keyCode == 13){
+    e.preventDefault();
+
+    
+    var input = textInput.value.toLowerCase();
+
+    
+    if(input.length > 0) {
+      createBubble(input)
+    }
+  }
+};
+
+sendForm.addEventListener('submit', function(e) {
+  
+  e.preventDefault();
+
+  
+  var input = textInput.value.toLowerCase();
+
+  
+  if(input.length > 0) {
+    createBubble(input)
+  }
+}) 
+
+var createBubble = function(input) {
+  
+  var chatBubble = document.createElement('li');
+  chatBubble.classList.add('userInput');
+
+  
+  chatBubble.innerHTML = input;
+
+  
+  chatList.appendChild(chatBubble)
+
+  checkInput(input);
+}
+
+var checkInput = function(input) {
+  hasCorrectInput = false;
+  isReaction = false;
+  
+  for(var textVal in possibleInput){
+    
+    if(input == "ya" || input.indexOf("yes") >= 0){
+      if(previousInput == textVal) {
+        console.log("sausigheid");
+
+        isReaction = true;
+        hasCorrectInput = true;
+        botResponse(textVal);
+      }
+    }
+    if(input == "tidak" && previousInput == textVal){
+      // Custom input
+      unknownCommand("")
+      
+      hasCorrectInput = true;
+    }
+    
+    if(input == textVal || input.indexOf(textVal) >=0 && isReaction == false){
+			console.log("succes");
+      hasCorrectInput = true;
+      botResponse(textVal);
+		}
+	}
+  
+  if(hasCorrectInput == false){
+    console.log("failed");
+    unknownCommand(unkwnCommReaction);
+    hasCorrectInput = true;
+  }
+}
+
+
+
+function botResponse(textVal) {
+  
+  // previousInput = input;
+
+  
+  var userBubble = document.createElement('li');
+  userBubble.classList.add('bot_output');
+
+  if(isReaction == true){
+    if (typeof reactionInput[textVal] === "function") {
+    
+      userBubble.innerHTML = reactionInput[textVal]();
+    } else {
+      userBubble.innerHTML = reactionInput[textVal];
+    }
+  }
+
+  if(isReaction == false){
+    
+    if (typeof possibleInput[textVal] === "function") {
+      // console.log(possibleInput[textVal] +" is a function");
+    
+      userBubble.innerHTML = possibleInput[textVal]();
+    } else {
+      userBubble.innerHTML = possibleInput[textVal];
+    }
+  }
+  
+  chatList.appendChild(userBubble) 
+  
+  textInput.value = "";
+}
+
+function unknownCommand(unkwnCommReaction) {
+  // animationCounter = 1;
+
+  
+  var failedResponse = document.createElement('li');
+
+  failedResponse.classList.add('bot_output');
+  failedResponse.classList.add('bot_output_failed');
+
+  
+  failedResponse.innerHTML = unkwnCommReaction; 
+
+  
+  chatList.appendChild(failedResponse) 
+
+  animateBotOutput();
+
+  
+  textInput.value = "";
+
+  
+  chatList.scrollTop = chatList.scrollHeight;
+
+  animationCounter = 1;
+}
+
+function responseText(e) {
+
+  var response = document.createElement('li');
+
+  response.classList.add('bot_output');
+
+  
+  response.innerHTML = e;
+
+  chatList.appendChild(response);
+
+  animateBotOutput();
+
+  console.log(response.clientHeight);
+
+  
+  setTimeout(function(){
+    chatList.scrollTop = chatList.scrollHeight;
+    console.log(response.clientHeight);
+  }, 0)
+}
+
+function responseImg(e) {
+  var image = new Image();
+
+  image.classList.add('bot_output');
+  
+  image.classList.add('bot_outputImage');
+  
+  image.src = "/images/"+e;
+  chatList.appendChild(image);
+
+  animateBotOutput()
+  if(image.completed) {
+    chatList.scrollTop = chatList.scrollTop + image.scrollHeight;
+  }
+  else {
+    image.addEventListener('load', function(){
+      chatList.scrollTop = chatList.scrollTop + image.scrollHeight;
+    })
+  }
+}
+
+
+function animateBotOutput() {
+  chatList.lastElementChild.style.animationDelay= (animationCounter * animationBubbleDelay)+"ms";
+  animationCounter++;
+  chatList.lastElementChild.style.animationPlayState = "running";
+}
+
+function commandReset(e){
+  animationCounter = 1;
+  previousInput = Object.keys(possibleInput)[e];
+}
+
+
+
+var possibleInput = {
+  
+  "hapus" : function(){
+    responseText("Refresh halaman untuk menghapus riwayat pertanyaan.")
+    commandReset(0);
+    return
+    },
+  "error" : function(){
+    responseText("Jika terjadi kesalahan pada tampilan halaman atau error silahkan untuk Refresh halaman jika error masih terjadi hubungi kami dengan klik tombol pojok kanan atas.");
+    commandReset(1);
+    return
+    },
+    
+  "cerita" : function(){
+    responseText("tulis teks disini");
+    commandReset(2);
+    return
+    },
+  
+  // href gangi link #id
+  "whatsapp" : function(){
+    window.location.href = "https://api.whatsapp.com/send?phone=6283857264569&text=Halo! roddsite disini :)"
+    },
+    "history" : function(){
+    window.location.href = "#history"
+    },
+  
+}
+
+var reactionInput = {
+  "roddsite" : function(){
+    
+    responseText("<a href='#'>React Roddsite</a>")
+    animationCounter = 1;
+    return
+  },
+  "menu" : function(){
+    responseText("<a href='#menu'>react menu</a>");
+    animationCounter = 1;
+    return
+    }
+}
+
+</SCRIPT>
+</body>
+</html>
